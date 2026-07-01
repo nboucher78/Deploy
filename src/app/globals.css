@@ -1,0 +1,226 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --primary-color: #0066CC;
+  --primary-light: #66B3FF;
+  --secondary-light: #F5F5F5;
+  --text-dark: #333333;
+  --text-medium: #666666;
+  --text-light: #999999;
+  --accent-yellow: #FFD700;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--text-dark);
+  background-color: #FFFFFF;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--secondary-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-light);
+}
+
+/* Base styles */
+.container {
+  @apply mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-dark);
+}
+
+h1 {
+  @apply text-4xl md:text-5xl;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl;
+}
+
+h3 {
+  @apply text-2xl md:text-3xl;
+}
+
+h4 {
+  @apply text-xl md:text-2xl;
+}
+
+p {
+  @apply text-base md:text-lg;
+}
+
+/* Links */
+a {
+  @apply text-primary-500 hover:text-primary-600 transition-colors duration-300;
+}
+
+/* Buttons */
+.btn {
+  @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+}
+
+.btn-primary {
+  @apply btn bg-primary-500 text-white hover:bg-primary-600 shadow-lg hover:shadow-xl;
+}
+
+.btn-secondary {
+  @apply btn border-2 border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white;
+}
+
+.btn-outline {
+  @apply btn border-2 border-secondary-300 text-secondary-700 hover:border-primary-500 hover:text-primary-500;
+}
+
+.btn-yellow {
+  @apply btn bg-accent-yellow text-primary-900 hover:bg-yellow-500;
+}
+
+/* Cards */
+.card {
+  @apply bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-secondary-100;
+}
+
+.card-featured {
+  @apply bg-gradient-to-br from-primary-50 to-secondary-50 rounded-xl shadow-lg border border-primary-200;
+}
+
+/* Sections */
+.section {
+  @apply py-16 md:py-24;
+}
+
+.section-light {
+  @apply section bg-secondary-50;
+}
+
+.section-dark {
+  @apply section bg-secondary-900 text-white;
+}
+
+/* Utility classes */
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-secondary {
+  color: var(--text-medium);
+}
+
+.text-light {
+  color: var(--text-light);
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.bg-secondary {
+  background-color: var(--secondary-light);
+}
+
+/* Animations */
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.8s ease-out;
+}
+
+/* Header */
+.header {
+  @apply bg-white shadow-sm sticky top-0 z-50;
+}
+
+/* Footer */
+.footer {
+  @apply bg-secondary-900 text-white;
+}
+
+/* Form elements */
+input,
+textarea,
+select {
+  @apply w-full px-4 py-3 rounded-lg border border-secondary-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-500 focus:outline-none transition-all duration-300;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  @apply border-primary-500;
+}
+
+/* Badges */
+.badge {
+  @apply inline-block px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.badge-primary {
+  @apply badge bg-primary-100 text-primary-700;
+}
+
+.badge-secondary {
+  @apply badge bg-secondary-100 text-secondary-700;
+}
+
+/* Divider */
+.divider {
+  @apply w-full h-px bg-secondary-200 my-8;
+}
+
+/* Hero section specific */
+.hero-gradient {
+  background: linear-gradient(135deg, #F5F5F5 0%, #E6F0FF 100%);
+}
+
+/* Realizations grid */
+.realizations-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+/* Stats counter */
+.stat-number {
+  @apply text-4xl md:text-5xl font-bold text-primary-500;
+}
+
+.stat-label {
+  @apply text-secondary-600 mt-2;
+}
