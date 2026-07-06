@@ -25,40 +25,6 @@ const nextConfig = {
 
   // Asset prefix for GitHub Pages
   // assetPrefix: process.env.NODE_ENV === 'production' ? '/Deploy/' : '',
-
-  // Headers for security
-  async headers() {
-    return [
-      {
-        source: "/:path*",
-        headers: [
-          {
-            key: "X-DNS-Prefetch-Control",
-            value: "on",
-          },
-          {
-            key: "X-Frame-Options",
-            value: "SAMEORIGIN",
-          },
-          {
-            key: "X-Content-Type-Options",
-            value: "nosniff",
-          },
-        ],
-      },
-    ];
-  },
-
-  // Redirects
-  async redirects() {
-    return [
-      {
-        source: "/activites",
-        destination: "/activites",
-        permanent: true,
-      },
-    ];
-  },
 };
 
 module.exports = nextConfig;

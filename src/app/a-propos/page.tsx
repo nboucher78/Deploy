@@ -1,3 +1,5 @@
+"use client";
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ExpertiseSection from "@/components/ExpertiseSection";
@@ -61,9 +63,9 @@ export default function AProposPage() {
               Notre pratique
             </h2>
             <p className="text-xl text-secondary-600 mb-8">
-              Notre pratique associe les missions techniques — modélisation,
+              Notre pratique associe les missions techniques – modélisation,
               études d&apos;infrastructures, diagnostic mobilité, évaluation économique
-              — au pilotage qualité conforme aux standards internationaux.
+              – au pilotage qualité conforme aux standards internationaux.
             </p>
             <p className="text-lg text-secondary-600">
               Cette double exigence nous permet de livrer une donnée fiable,
@@ -107,7 +109,7 @@ export default function AProposPage() {
                   <div className="space-y-2 mb-6">
                     {founder.education.map((edu, index) => (
                       <p key={index} className="text-secondary-600 text-sm">
-                        • {edu}
+                        ● {edu}
                       </p>
                     ))}
                   </div>
@@ -170,7 +172,7 @@ export default function AProposPage() {
                 <ul className="space-y-2">
                   {tool.items.map((item, itemIndex) => (
                     <li key={itemIndex} className="text-secondary-600">
-                      • {item}
+                      ● {item}
                     </li>
                   ))}
                 </ul>
