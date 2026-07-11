@@ -28,6 +28,7 @@ export const metadata: Metadata = {
     "international",
   ],
   authors: [{ name: "TDME", url: "https://tdme.fr" }],
+  metadataBase: new URL("https://tdme.fr"),
   openGraph: {
     title: "TDME | Transport Data & Mobility Engineering",
     description:

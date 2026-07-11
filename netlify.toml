@@ -1,0 +1,29 @@
+# Netlify configuration for TDME website
+# https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  # Build command for static export
+  command = "npm run build"
+  
+  # Output directory (Next.js static export generates files in 'out/')
+  publish = "out"
+  
+  # Base directory (root of the project)
+  base = "/"
+
+# Environment variables (if needed)
+[build.environment]
+  NODE_VERSION = "20"
+
+# Redirects (alternative to public/_redirects)
+# [[redirects]]
+#   from = "/old-path"
+#   to = "/new-path"
+#   status = 301
+
+# Headers (if needed)
+# [[headers]]
+#   for = "/*"
+#   [headers.values]
+#     X-Frame-Options = "SAMEORIGIN"
+#     X-Content-Type-Options = "nosniff"

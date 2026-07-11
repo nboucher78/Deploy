@@ -1,0 +1,9 @@
+# Netlify redirects for TDME website
+# Format: https://docs.netlify.com/routing/redirects/
+
+# Example: Redirect /old-path to /new-path
+# /old-path  /new-path  301
+
+# Add your custom redirects here if needed
+# Example:
+# /activites  /activites  301
