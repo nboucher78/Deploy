@@ -11,9 +11,15 @@
   # Base directory (root of the project)
   base = "/"
 
-# Environment variables (if needed)
+# Environment variables
 [build.environment]
   NODE_VERSION = "20"
+  # Disable Next.js build cache to avoid issues with static export
+  NEXTJS_BUILD_CACHE = "false"
+
+# Clear cache on every deploy to ensure fresh dependencies
+[build.processing]
+  skip_processing = false
 
 # Redirects (alternative to public/_redirects)
 # [[redirects]]
