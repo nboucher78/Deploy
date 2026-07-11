@@ -97,6 +97,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             </svg>
           </Link>
         </div>
-      </motion.div>
+      </div>
+    </motion.div>
   );
 }
